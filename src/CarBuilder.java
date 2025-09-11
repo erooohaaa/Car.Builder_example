@@ -1,9 +1,9 @@
-class Car {
+class CarBuilder {
     private final String name;
     private final int release;
     private final String country;
 
-    private Car(Builder builder) {
+    private CarBuilder(Builder builder) {
         this.name = builder.name;
         this.release = builder.release;
         this.country = builder.country;
@@ -34,8 +34,8 @@ class Car {
             this.country = country;
             return this;
         }
-        public Car build() {
-            return new Car(this);
+        public CarBuilder build() {
+            return new CarBuilder(this);
         }
 
     }

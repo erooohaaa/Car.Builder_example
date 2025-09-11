@@ -1,19 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        Car car1 = new Car.Builder("Honda")
+        CarBuilder carBuilder1 = new CarBuilder.Builder("Honda")
                 .release(2022)
                 .country("South Korea")
                 .build();
-        Car car2 = new Car.Builder("BMW")
+        CarBuilder carBuilder2 = new CarBuilder.Builder("BMW")
                 .release(2010)
                 .country("Germany")
                 .build();
-        Car car3 = new Car.Builder("BMW")
+        CarBuilder carBuilder3 = new CarBuilder.Builder("BMW")
                 .release(2010)
                 .build();
 
-        System.out.println(car1);
-        System.out.println(car2);
-        System.out.println(car3);
+        System.out.println(carBuilder1);
+        System.out.println(carBuilder2);
+        System.out.println(carBuilder3);
     }
 }

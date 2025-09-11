@@ -36,16 +36,12 @@ All fields in the `Car` class are declared as `final` to ensure:
 ```java
 public class Main {
     public static void main(String[] args) {
-        Car car1 = new Car.Builder("Honda")
-                .release(2022)
-                .country("South Korea")
-                .build();
+        Builder builder = new CarDirector();
+        builder.setName("Toyota");
+        builder.setRelease(2020);
+        builder.setCountry("Japan");
 
-        Car car2 = new Car.Builder("BMW")
-                .release(2010)
-                .build();
-
-        System.out.println(car1);
-        System.out.println(car2);
+        Car car = builder.build();
+        System.out.println(car);
     }
 }

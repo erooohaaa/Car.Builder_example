@@ -1,13 +1,13 @@
-# Report: Phone.Builder1 Implementation in Java
+# Report: Car.Builder Implementation in Java
 
 ## Product Choice
-For this task, the chosen product was **Phone**, implemented with the **Builder1 Pattern**.  
-Builder1 makes it possible to create an object with mandatory and optional parameters in a clear and readable way.
+For this task, the chosen product was **Car**, implemented with the **Builder Pattern**.  
+Builder makes it possible to create an object with mandatory and optional parameters in a clear and readable way.
 
 ---
 
 ## Why `final` fields are used
-All fields in the `Phone` class are declared as `final` to ensure:
+All fields in the `Car` class are declared as `final` to ensure:
 - **Immutability** – the object cannot be modified after creation.  
 - **Reliability** – protects fields from accidental changes in the code.  
 - **Thread safety** – immutable objects are safer to use in multithreaded environments.  
@@ -21,11 +21,11 @@ All fields in the `Phone` class are declared as `final` to ensure:
 
 2. **Minimalism and no duplication**  
    - Only essential logic is included.  
-   - Builder1 methods return `this`, which allows fluent method chaining.
+   - Builder methods return `this`, which allows fluent method chaining.
 
 3. **Single Responsibility per method**  
-   - Each builder1 method sets exactly one parameter.  
-   - `build()` is only responsible for constructing the `Phone`.
+   - Each builder method sets exactly one parameter.  
+   - `build()` is only responsible for constructing the `Car`.
 
 4. **Clear interface for usage**  
    - Client code is easy to read and resembles natural language.
@@ -36,16 +36,12 @@ All fields in the `Phone` class are declared as `final` to ensure:
 ```java
 public class Main {
     public static void main(String[] args) {
-        Phone car1 = new Phone.Builder1("Honda")
-                .release(2022)
-                .country("South Korea")
-                .build();
+        Builder builder = new CarDirector();
+        builder.setName("Toyota");
+        builder.setRelease(2020);
+        builder.setCountry("Japan");
 
-        Phone car2 = new Phone.Builder1("BMW")
-                .release(2010)
-                .build();
-
-        System.out.println(car1);
-        System.out.println(car2);
+        Car car = builder.build();
+        System.out.println(car);
     }
 }

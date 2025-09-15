@@ -12,9 +12,14 @@ public interface Builder2 {
     void setRelease(int release);
     void setCountry(String country);
     void setCost(String cost);
-
-
-
-
+    void setOS(String OS);
+    void setWeight(String weight);
+    void setDimensions(String dimensions);
+    void setRefreshRate(String refreshRate);
+    void setKeyboard(String keyboard);
+    void setPorts(String ports);
+    void setCooling(String cooling);
+    void setSpeakers(String speakers);
+    void setMaterials(String materials);
     Laptop build();
 }

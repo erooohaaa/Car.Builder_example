@@ -11,9 +11,14 @@ public interface Builder1 {
     void setRelease(int release);
     void setCountry(String country);
     void setCost(String cost);
-
-
-
-
+    void setOS(String OS);
+    void setWeight(String weight);
+    void setDimensions(String dimensions);
+    void setRefreshRate(String refreshRate);
+    void setNetwork(String network);
+    void setSIM(String SIM);
+    void setSecurity(String security);
+    void setCharging(String charging);
+    void setMaterials(String materials);
     Phone build();
 }

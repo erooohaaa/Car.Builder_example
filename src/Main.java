@@ -4,7 +4,7 @@ public class Main {
         phoneBuilder.setName("Samsung Galaxy S24 Ultra");
         phoneBuilder.setDisplay("6.8-inch QHD+ AMOLED");
         phoneBuilder.setCPU("Snapdragon 8 Gen 3");
-        phoneBuilder.setMemory("12GB");
+        phoneBuilder.setMemory("128GB");
         phoneBuilder.setRAM("12GB");
         phoneBuilder.setBattery("5000mAh");
         phoneBuilder.setColor("Phantom Black");
